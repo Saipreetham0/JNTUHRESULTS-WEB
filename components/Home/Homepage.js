@@ -4,7 +4,7 @@ import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 
-import { Typography, PageContainer,  Button} from '@cred/neopop-web/lib/components';
+import { Typography, PageContainer,  Button, Row,  VerticalSpacer, HorizontalSpacer } from '@cred/neopop-web/lib/components';
 
 import { colorPalette, FontVariant } from '@cred/neopop-web/lib/primitives';
 
@@ -38,11 +38,11 @@ const HomePage = () => {
         <div className="  md:flex justify-center  p-8 pt-[100px] ">
           <center className='md:flex font-montser text-[28px] md:text-[50px] lg:text-[70px] '>
             Welcome to&nbsp;
-            <div className='text-blue-400 hover:text-blue-600 hover:underline'>
+            <div className='text-blue-400 hover:text-black '>
               <Link href="/">
-              <Typography {...FontVariant.HeadingBold22} color={colorPalette.popBlack[500]}>
+              {/* <Typography {...FontVariant.HeadingBold22} color={colorPalette.popBlack[500]}> */}
                 JNTUH Results!
-                </Typography>
+                {/* </Typography> */}
               </Link>
             </div>
 
@@ -53,9 +53,10 @@ const HomePage = () => {
         </div>
         <center>
 
-        
-        {/* <div class="w-24 h-24 border-2 border-black bg-white"></div> */}
-        <Button
+
+
+        <Row className="v-center">
+          <Button
             variant="secondary"
             kind="elevated"
             size="big"
@@ -71,7 +72,12 @@ const HomePage = () => {
         >
             Academic Results
         </Button>
+        </Row>
 
+        <HorizontalSpacer n={5} />
+
+        
+        <Row className="v-center">
         <Button
             variant="secondary"
             kind="elevated"
@@ -88,10 +94,59 @@ const HomePage = () => {
         >
             Class Results
         </Button>
+        </Row>
+        <HorizontalSpacer n={5} />
+
+        
+        <Row className="v-center">
+        <Button
+            variant="secondary"
+            kind="elevated"
+            size="big"
+            showArrow
+            // fullWidth
+            
+
+            colorMode="dark"
+            onClick={() => {
+                // console.log("I'm clicked");
+                handleClassResult();
+            }}
+        >
+            Notifications
+        </Button>
+        </Row>
+        <HorizontalSpacer n={5} />
+
+        
+        <Row className="v-center">
+        <Button
+            variant="secondary"
+            kind="elevated"
+            size="big"
+            showArrow
+            // fullWidth
+            
+
+            colorMode="dark"
+            onClick={() => {
+                // console.log("I'm clicked");
+                handleClassResult();
+            }}
+        >
+            Class Results
+        </Button>
+        </Row>
+        
 
 
           <div className="home-links flex flex-wrap items-center justify-around max-w-4xl md:mt-6  sm:w-full">
-            <Link href="/academicreport">
+
+            
+
+
+
+            {/* <Link href="/academicreport">
 
               <div className="border  hover:drop-shadow-sm group text-black border-slate-800 md:border-gray-100 shadow-2xl max-w-xs p-6 mt-6 text-left md:w-96 rounded-xl hover:border-gray-500 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 hover:bg-blue-300 duration-300" >
                 <h3 className="group-hover:text-black text-lg sm:text-2xl font-bold">
@@ -104,8 +159,8 @@ const HomePage = () => {
                 </h3>
                 <p className="group-hover:text-black text-slate-500 mt-4 text-base sm:text-xl"> Access your overall academic performance with just an hall ticket.</p>
               </div>
-            </Link>
-            <Link href="/classresult">
+            </Link> */}
+            {/* <Link href="/classresult">
 
               <div className="border border-slate-800 md:border-gray-100  hover:drop-shadow-sm group text-black text-white shadow-2xl max-w-xs p-6 mt-6 text-left md:w-96 rounded-xl hover:border-gray-500 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 hover:bg-blue-300 duration-300" >
                 <h3 className="group-hover:text-black text-lg sm:text-2xl font-bold">
@@ -119,8 +174,8 @@ const HomePage = () => {
                 <p className="group-hover:text-black text-slate-500 mt-4 text-base sm:text-xl">View the results of your classmates and compare your performance with theirs.
                 </p>
               </div>
-            </Link>
-            <Link href="/notifications">
+            </Link> */}
+            {/* <Link href="/notifications">
 
               <div className="border border-slate-800 md:border-gray-100  hover:drop-shadow-sm group text-black text-white shadow-2xl max-w-xs p-6 mt-6 text-left md:w-96 rounded-xl hover:border-gray-500 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 hover:bg-blue-300 duration-300" >
                 <h3 className="group-hover:text-black text-lg sm:text-2xl font-bold">
@@ -134,8 +189,8 @@ const HomePage = () => {
                 <p className="group-hover:text-black text-slate-500 mt-4 text-base sm:text-xl">Stay informed with JNTUH notifications for up-to-date information and updates.
                 </p>
               </div>
-            </Link>
-            <Link href="/helpcenter">
+            </Link> */}
+            {/* <Link href="/helpcenter">
 
               <div className="border border-slate-800 md:border-gray-100  hover:drop-shadow-sm group text-black text-white shadow-2xl max-w-xs p-6 mt-6 text-left md:w-96 rounded-xl hover:border-gray-500 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 hover:bg-blue-300 duration-300" >
                 <h3 className="group-hover:text-black text-lg sm:text-2xl font-bold">
@@ -149,7 +204,7 @@ const HomePage = () => {
                 <p className="group-hover:text-black text-slate-500 mt-4 text-base sm:text-xl">Discover a Bug? Report it and Help us in Enhancing Your Experience!
                 </p>
               </div>
-            </Link>
+            </Link> */}
           </div>
         </center>
 
